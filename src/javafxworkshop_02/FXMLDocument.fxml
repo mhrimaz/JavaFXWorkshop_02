@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="465.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxworkshop_02.FXMLDocumentController">
+    <top>
+        <Button fx:id="button" mnemonicParsing="false" onAction="#handleOnAction" text="Button" BorderPane.alignment="CENTER" />
+    </top>
+    <left>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <RadioButton mnemonicParsing="false" text="RadioButton">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="group1" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton mnemonicParsing="false" text="RadioButton" toggleGroup="$group1" />
+                <RadioButton mnemonicParsing="false" text="RadioButton" toggleGroup="$group1" />
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <ComboBox fx:id="combo" prefWidth="150.0" BorderPane.alignment="CENTER">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="item 1" />
+                    <String fx:value="item 1" />
+                    <String fx:value="item 1" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </center>
+</BorderPane>
